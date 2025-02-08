@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+  --primary: rgb(11, 174, 206);
+  --general: rgb(245, 245, 245, 0.6);
+  --black: rgb(25, 24, 24);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", serif;
+  scroll-behavior: smooth;
+}
+
+.website-name-logo{
+  display: flex;
+  align-items: center;
+}
+
+.website-name{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.website-logo{
+  width: 50px;
+}
+
+.btn-contact{
+  padding: 8px 13px;
+  border: 1px solid var(--general);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  cursor: pointer;
+}
+
+.btn-contact:hover{
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color:whitesmoke;
+}
+
+.btn-contact:focus{
+  border: 1px solid rgb(9, 128, 155);
+}
+
+.nav-container{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+header{
+  z-index: 10;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7rem;
+  z-index: 10;
+  background-color: rgb(255, 255, 255, 0.75);
+}
+
+.navlinks-list > li{
+  list-style: none;
+  display: inline-flex;
+  padding-right: 15px;
+  align-items: center;
+}
+
+.divide{
+  font-size: 18px;
+}
+
+.navlinks-list > li > a{
+  text-decoration: none;
+}
+
+.navlinks-list > li > a.active{
+  color: var(--primary);
+}
+
+a.navlink:link{
+  color: var(--black);
+}
+
+a.navlink:visited{
+  color: var(--primary);
+}
+
+a.navlink:hover{
+  text-decoration: underline;
+}
+
+a.navlink:active{
+  color: rgb(240, 67, 125);
+}
+
+main{
+  margin-top: 4.9rem;
+}
+
+.hero-banner-container{
+  height: 570px;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.banner-overview-container{
+  background-color: whitesmoke;
+  padding: 10px 3rem;
+  display: flex;
+  border-radius: 30px;
+}
+
+.travel-image-container, .banner-quote-container{
+  margin-top: 20px;
+}
+
+.active-tab{
+  text-decoration: underline var(--primary);
+  text-underline-offset: 7px; 
+}
+
+.vertical-tab{
+  width: 30px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: -90deg;
+  gap: 20px;
+  padding-bottom: 3rem;
+}
+
+.banner-quote-container{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.banner-quote{
+  font-size: 3rem;
+}
+
+.banner-quote::first-letter{
+  color: var(--primary);
+  font-size: 5rem;
+}
+
+.group-btn{
+  display: flex;
+  gap: 15px;
+}
+
+.btn-explore {
+  background-color: var(--primary);
+  border-radius: 999px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.btn-play{
+  width: fit-content;
+  border: none;
+  background: none;
+}
+
+.fa-play{
+  color: var(--primary);
+  font-size: 20px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 18px;
+  padding: 8px 10px;
+}
+
+.fa-play:hover{
+  border: 1px solid rgba(14, 170, 205, 0.487);
+  cursor: pointer;
+}
+
+.user-rating-container{
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.user-profile{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.username-rating{
+  font-weight: bold;
+}
+
+.user-about-star, .username-rating{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-about{
+  font-size: small;
+}
+
+.fa-star, .fa-star-half{
+  color: rgb(249, 218, 64);
+}
+
+.beach-rating{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-between{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.beach-view-content{
+  font-size: small;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  position: absolute;
+  bottom: 15px;
+  left: 22px;
+}
+
+.coffee-container{
+  width: 300px;
+  background-color: rgb(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.coffee-invitation{
+  width: 70%;
+  font-size: small;
+  padding-bottom: 10px;
+}
+
+.coffee-sunset-image{
+  width: 90px;
+  height: 130px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  margin-left: 10px;
+}
+
+.group-images{
+  position: relative;
+  display: flex;
+}
+
+.travel-image{
+  height: 90px;
+  width: 65px;
+  border-radius: 10px;
+  border: 1px solid rgb(245, 245, 245, 0.45);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
+
+.travel-image2{
+  position: relative;
+  left: -25px;
+  z-index: 2;
+}
+
+.travel-image3{
+  position: relative;
+  top: 0;
+  right: 50px;
+  z-index: 3;
+}
+
+.images-title{
+  height: 100%;
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;
+  padding-left: 5px;
+  justify-content: center;
+}
+
+.sunset-beach-view-container, .beach-view-container{
+  z-index: 1;
+  width: 210px;
+  height: 290px;
+  border-radius: 15px;
+  position: relative;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.sunset-beach-view-container{
+  background-image: url("../images/sunset-beach-view.jpg");
+}
+
+.beach-view-container{
+  background-image: url(../images/beach-view.jpg);
+}
+
+.right-travel-image{
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-left{
+  height: auto;
+  width: 270px;
+  margin-right: 20px;
+}
+
+.travel-image-container{
+  width: 65%;
+  display: flex;
+}
+
+.btn-explore-more{
+  border: 1px solid var(--primary);
+  padding: 7px 12px;
+  border-radius: 15px;
+  background-color: white;
+  color: var(--primary);
+  width: fit-content;
+  transition: 0.5s linear;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
+
+.btn-explore-more:hover{
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-explore-more:focus{
+  border: 1px solid rgb(246, 131, 8);
+  background-color: rgb(251, 151, 43);
+  color: white;
+}
+
+.btn-container{
+  color: white;
+}
+
+.second-main-section{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+.image-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s;
+}
+
+.image-card:hover{
+  transform: scale(1.05);
+}
+
+.second-content{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.travel-quote1-explanation{
+  width: 95%;
+}
+
+.travel-quote1{
+  font-size: 1.8rem;
+}
+
+.travel-quote-3{
+  font-size: 1.25rem;
+}
+
+.camping-travel-image{
+  display: flex;
+  gap: 15px;
+  width: 50%;
+  justify-content: center;
+  position: relative;
+}
+
+.image-card1, .image-card2, .image-card3{
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  border: 10px solid white;
+}
+
+.image-card1{
+  background-image: url(../images/camping-morning.jpg);
+}
+
+.image-card2{
+  background-image: url(../images/camping-evening.jpg);
+  margin-top: 5rem;
+}
+
+.image-card3{
+  background-image: url(../images/camping-coffee.jpg);
+  margin-top: 1rem;
+}
+
+.third-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3rem;
+}
+
+.travel-quote2{
+  font-size: 2rem;
+}
+
+.quote-container{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  gap: 25px;
+  width: 40%;
+}
+
+.quote-list-number{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-number{
+  padding: 3px 5px;
+  background-color: var(--primary);
+  width: 30px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+.image-comment{
+  background-image: url(../images/switzerland-view.jpg);
+  width: 30%;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.fa-heart{
+  color: var(--primary);
+}
+
+.user-rating-content{
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  background-color: var(--general);
+  width: fit-content;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.username{
+  font-size: small;
+}
+
+.third-content{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  height: 480px;
+  margin-top: 2rem;
+}
+
+.text-small{
+  font-size: 16px;
+}
+
+.user-comment1, .user-comment2, .user-comment3{
+  position: absolute;
+  background-color: rgb(255, 255, 255, 0.85);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user-comment1{
+  top: 3rem;
+  left: -32px;
+}
+
+.user-comment2{
+  top: 9rem;
+  right: -35px;
+}
+
+.user-comment3{
+  bottom: 6rem;
+  left: -32px;
+}
+
+.footer{
+  margin-top: 3rem;
+  padding: 20px;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.top {
+  text-decoration: none;
+  padding: 8px 12px;
+  font-family: sans-serif;
+  color: var(--primary);
+  background-color: var(--white);
+  border-radius: 50%;
+  text-align: center;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
